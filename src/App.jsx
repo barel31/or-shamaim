@@ -52,6 +52,7 @@ export default function App() {
                 </Routes>
                 <NavBar buttons={pages.titles()} routes={pages.routes()} />
             </div>
+            <footer>Made with react by Barel Shraga ©</footer>
         </div>
     );
 }
