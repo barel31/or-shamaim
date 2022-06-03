@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/or-shamaim/static/css/main.cbcfb69c.css",
-    "main.js": "/or-shamaim/static/js/main.deb264ed.js",
+    "main.js": "/or-shamaim/static/js/main.e012d4b8.js",
     "index.html": "/or-shamaim/index.html",
     "main.cbcfb69c.css.map": "/or-shamaim/static/css/main.cbcfb69c.css.map",
-    "main.deb264ed.js.map": "/or-shamaim/static/js/main.deb264ed.js.map"
+    "main.e012d4b8.js.map": "/or-shamaim/static/js/main.e012d4b8.js.map"
   },
   "entrypoints": [
     "static/css/main.cbcfb69c.css",
-    "static/js/main.deb264ed.js"
+    "static/js/main.e012d4b8.js"
   ]
 }
