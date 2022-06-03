@@ -8,8 +8,8 @@ import NavBar from './Components/NavBar';
 
 const pages = [
     {
-        // route: 'birth',
-        route: '', // homepage
+        route: 'birth',
+        // route: '', // homepage
         title: 'קריאת מפת לידה',
         content: 'אני אור אליהו ואני מלך ובראל אחי הוא משרת שלי ואתם נתיניי בעם שלי ומשלמים לי מיסים😒',
     },
