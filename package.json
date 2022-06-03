@@ -1,8 +1,8 @@
 {
-    "homepage": "https://barel31.github.io/or-shamaim",
-    "name": "or-shamaim",
-    "version": "0.1.0",
-    "private": true,
+  "name": "or-shamaim",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://barel31.github.io/or-shamaim",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.3.0",
