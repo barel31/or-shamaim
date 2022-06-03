@@ -45,6 +45,7 @@ export default function App() {
             <h1 className='title'>אור השמיים</h1>
             <div className='container'>
                 <Routes>
+                    <Route path={`/`} element={<Content content={pages[0].content} />} />
                     {pages.map((v, i) => (
                         <Route key={i} path={`/${v.route}`} element={<Content content={v.content} />} />
                     ))}
