@@ -59,8 +59,9 @@ body {
     margin: 1vh;
     background-color: #faf4b7;
     font-size: 1rem;
-    width: 11vw;
-    height: 7vh;
+    /* width: 11vw; */
+    /* height: 7vh; */
+    width: 150px;
 }
 
 @media screen and (max-width: 600px) {
@@ -92,6 +93,5 @@ body {
         width: 40vw;
         height: 7vh;
         margin: 0.5vh auto;
-
     }
 }
