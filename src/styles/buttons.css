@@ -94,6 +94,6 @@ h1 {
         --dot-w: calc(var(--btn-w) * 0.4);
     }
     .dot {
-        right: 5.4em;
+        right: 5.5em;
     }
 }
