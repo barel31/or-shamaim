@@ -7,11 +7,9 @@ export default function NavBar({ buttons, routes }) {
     return (
         <div className='nav-bar'>
             {buttons.map((v, i) => (
-                <button
-                    key={i}
-                    className='nav-btn'
-                    onClick={() => nav(`/${routes[i]}`)}>
+                <button key={i} className='nav-btn btn-atom' onClick={() => nav(`/${routes[i]}`)}>
                     {v}
+                    <div className='dot'></div>
                 </button>
             ))}
         </div>

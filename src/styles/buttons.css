@@ -1,0 +1,99 @@
+:root {
+    --bg: #3c465c;
+    --primary: #2a6e55;
+    --solid: #fff;
+    --btn-w: 10em;
+    --dot-w: calc(var(--btn-w) * 0.3);
+    --tr-X: calc(var(--btn-w) - var(--dot-w));
+}
+* {
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+/* 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    background: var(--bg);
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+} */
+h1 {
+    color: var(--solid);
+    font-size: 2.5rem;
+    margin-top: 6rem;
+}
+.btn-atom {
+    position: relative;
+    /* margin: 0 auto; */
+    /* width: var(--btn-w); */
+    color: var(--primary);
+    border: 0.15em solid var(--primary);
+    border-radius: 5em;
+    text-transform: uppercase;
+    text-align: center;
+    /* font-size: 1em; */
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.dot {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: var(--dot-w);
+    height: 100%;
+    border-radius: 100%;
+    transition: all 300ms ease;
+    display: none;
+    right: 6.8em;
+}
+.dot:after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 0.4em);
+    top: -0.4em;
+    height: 0.8em;
+    width: 0.8em;
+    background: var(--primary);
+    border-radius: 1em;
+    border: 0.25em solid var(--solid);
+    box-shadow: 0 0 0.7em var(--solid), 0 0 2em var(--primary);
+}
+.btn-atom:hover .dot,
+.btn-atom:focus .dot {
+    animation: atom 2s infinite linear;
+    display: block;
+}
+@keyframes atom {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    25% {
+        transform: translateX(var(--tr-X)) rotate(0);
+    }
+    50% {
+        transform: translateX(var(--tr-X)) rotate(180deg);
+    }
+    75% {
+        transform: translateX(0) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --dot-w: calc(var(--btn-w) * 0.4);
+    }
+    .dot {
+        right: 4.8em;
+    }
+}
