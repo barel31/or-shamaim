@@ -91,9 +91,9 @@ h1 {
 
 @media screen and (max-width: 600px) {
     :root {
-        --dot-w: calc(var(--btn-w) * 0.4);
+        --dot-w: calc(var(--btn-w) * 0.3);
     }
     .dot {
-        right: 5.5em;
+        right: 6.4em;
     }
 }

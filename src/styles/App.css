@@ -90,8 +90,9 @@ body {
         width: 100%;
     }
     .nav-btn {
-        width: 40vw;
-        height: 7vh;
+        /* width: 40vw; */
+        width: 150px;
+        /* height: 7vh; */
         margin: 0.5vh auto;
     }
 }
