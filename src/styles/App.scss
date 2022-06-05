@@ -12,10 +12,13 @@
 
 body {
     text-align: center;
+    height: vmin;
+    width: vmax;
 }
 
 .title {
-    margin-top: 1vh;
+    position: relative;
+    padding-top: 3vh;
     font-size: 4em;
     -webkit-text-stroke: 0.5px black;
 }
@@ -45,7 +48,6 @@ body {
 .container {
     display: flex;
     width: 100vw;
-    max-width: 1000px;
 }
 
 .navbar-desk {
@@ -113,8 +115,9 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    position: relative;
-    left: 90%;
+    position: fixed;
+    top: 0;
+    right: 0;
     margin: 1vh;
 
     display: flex;
