@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ipsums } from './Contents';
 
-import './styles/App.css';
+import './styles/App.scss';
 import './styles/clouds.css';
 import './styles/buttons.css';
 
