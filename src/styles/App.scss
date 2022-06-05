@@ -113,12 +113,12 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
+    left: 90%;
     margin: 1vh;
 
     display: flex;
+    
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
