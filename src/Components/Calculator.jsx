@@ -29,24 +29,30 @@ const Calculator = () => {
                     setBirthDateResult('Calculating...');
                     getSunsetSunrise(birthDate).then((data) => {
                         console.log(data);
-                        const diff = timeStringToFloat(data.sunset) - timeStringToFloat(data.sunrise);
+                        const diffDecimal = timeStringToFloat(data.sunset) - timeStringToFloat(data.sunrise);
 
-                        const calc = (diff, perHour = true) => {
-                            const time = String(perHour ? diff / 12 : diff);
-                            const hours = time.substring(0, time.indexOf('.'));
-                            const minutes = Math.floor(diff % 60);
-                            return `${hours} hours and ${minutes} minutes`;
-                        };
+                        const diffString = String(diffDecimal);
+                        const hours = diffString.substring(0, diffString.indexOf('.'));
+                        const minutes = Math.floor(diffDecimal % 60);
+                        const result = `${hours} hours and ${minutes} minutes`;
 
-                        const result = calc(diff);
-                        console.log({ diff, result: result });
-                        setBirthDateResult(calc(diff, false) + '_' + result);
+                        //! date 1997-10-18 is not calculate hour
+
+                        const resultPerHour = (diffDecimal / 12) * 60;
+                        const hoursPerHour = Math.floor(resultPerHour / 60);
+                        const minutesPerHour = Math.floor(resultPerHour % 60);
+                        const final = `${result}_${hoursPerHour} hours and ${minutesPerHour} minutes`;
+                        console.log({ diffDecimal, result: final });
+
+                        setBirthDateResult(final);
                     });
                 }}>
                 log sunset & sunrise
             </button>
             <p>
-                Time between sunset and sunrise: {birthDateResult.substring(0, birthDateResult.indexOf('_'))}
+                Time between sunset and sunrise:
+                <br />
+                {birthDateResult.substring(0, birthDateResult.indexOf('_'))}
                 <br />
                 Per hour: {birthDateResult.substring(birthDateResult.indexOf('_') + 1)}
             </p>
