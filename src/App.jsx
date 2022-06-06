@@ -8,14 +8,10 @@ import './styles/buttons.css';
 
 import Content from './Components/Content';
 import NavBar from './Components/NavBar';
+import Calculator from './Components/Calculator';
 
 const pages = [
-    {
-        route: 'birth',
-        // route: '', // homepage
-        title: 'קריאת מפת לידה',
-        content: ipsums[0],
-    },
+    { route: 'birth', title: 'קריאת מפת לידה', content: ipsums[0] },
     { route: 'hand', title: 'קריאת כף יד', content: ipsums[1] },
     { route: 'quality', title: 'חיי איכות', content: ipsums[2] },
     { route: 'prays', title: 'תפילות וסגולות', content: ipsums[3] },
@@ -48,7 +44,7 @@ export default function App() {
             <h1 className='title font'>אור השמיים</h1>
             <div className='container'>
                 <Routes>
-                    {/* default routes */}
+                    {/* default route */}
                     <Route path={`/`} element={<Content content={pages[0].content} />} />
                     {pages.map((v, i) => (
                         <Route key={i} path={`/${v.route}`} element={<Content content={v.content} />} />
@@ -57,6 +53,7 @@ export default function App() {
                 <NavBar buttons={pages.titles()} routes={pages.routes()} />
             </div>
             <footer className='font'>Made with React by Barel Shraga ©</footer>
+            <Calculator />
         </div>
     );
 }
