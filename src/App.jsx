@@ -44,7 +44,7 @@ export default function App() {
                 </div>
             </div>
             <motion.h1
-                whileInView={{ opacity: [0, 1] }}
+                whileInView={{ y: [-50, 0], opacity: [0, 1] }}
                 whileHover={{ scale: 1.25 }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
                 className='title font'>

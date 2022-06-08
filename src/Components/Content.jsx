@@ -6,7 +6,7 @@ export default function Content({ content }) {
         <div className='content'>
             <div>
                 <motion.p
-                    whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                    whileInView={{ y: [100, 0], opacity: [0, 1] }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                     dir='rtl'
                     className='content-paragraph'
