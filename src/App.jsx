@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ipsums } from './Contents';
+import { ipsums, contents } from './Contents';
+import { motion } from 'framer-motion';
 
 import './styles/App.scss';
 import './styles/clouds.css';
@@ -12,7 +13,7 @@ import Calculator from './Components/Calculator';
 import SocialMedia from './Components/SocialMedia';
 
 const pages = [
-    { route: 'birth', title: 'קריאת מפת לידה', content: ipsums[0] },
+    { route: 'birth', title: 'קריאת מפת לידה', content: contents[0] },
     { route: 'hand', title: 'קריאת כף יד', content: ipsums[1] },
     { route: 'quality', title: 'חיי איכות', content: ipsums[2] },
     { route: 'prays', title: 'תפילות וסגולות', content: ipsums[3] },
@@ -42,7 +43,14 @@ export default function App() {
                     <div className='cloud'></div>
                 </div>
             </div>
-            <h1 className='title font'>אור השמיים</h1>
+            <motion.h1
+                whileInView={{ opacity: [0, 1] }}
+                whileHover={{ scale: 1.25 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                className='title font'>
+                אור השמיים
+            </motion.h1>
+
             <div className='container'>
                 <Routes>
                     {/* default route */}
