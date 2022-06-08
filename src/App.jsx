@@ -9,6 +9,7 @@ import './styles/buttons.css';
 import Content from './Components/Content';
 import NavBar from './Components/NavBar';
 import Calculator from './Components/Calculator';
+import SocialMedia from './Components/SocialMedia';
 
 const pages = [
     { route: 'birth', title: 'קריאת מפת לידה', content: ipsums[0] },
@@ -54,6 +55,7 @@ export default function App() {
             </div>
             <footer className='font'>Made with React by Barel Shraga ©</footer>
             <Calculator />
+            <SocialMedia />
         </div>
     );
 }

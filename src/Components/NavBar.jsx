@@ -9,7 +9,7 @@ export default function NavBar({ buttons, routes }) {
     const nav = useNavigate();
 
     return (
-        <div className='navbar-container'>
+        <div className='Navbar'>
             <nav className='navbar-desk'>
                 <ul>
                     {buttons.map((v, i) => (
