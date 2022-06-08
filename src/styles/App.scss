@@ -35,6 +35,8 @@ body {
 
     padding: 1vh;
     .content {
+        width: 100%;
+
         div {
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
