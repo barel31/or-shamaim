@@ -21,7 +21,7 @@ export default function NavBar({ buttons, routes }) {
                                 setToggle(false);
                             }}>
                             {v}
-                            <div className='dot'></div>
+                            <div className='dot' />
                         </li>
                     ))}
                 </ul>
