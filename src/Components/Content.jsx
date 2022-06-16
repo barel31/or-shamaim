@@ -14,7 +14,7 @@ export default function Content({ content }) {
                 />
                 <motion.div
                     style={content.bubble ? {} : { display: 'none' }}
-                    whileInView={{ x: [-50, 0], opacity: [0.5, 1] }}
+                    whileInView={{ x: [-100, 0], opacity: [0.5, 1] }}
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
                     className='content-bubble'

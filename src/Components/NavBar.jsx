@@ -10,23 +10,24 @@ export default function NavBar({ buttons, routes }) {
 
     return (
         <div className='Navbar'>
-            <nav className='navbar-desk'>
-                <ul>
-                    {buttons.map((v, i) => (
-                        <li
-                            key={`nav-${i}`}
-                            className='nav-btn btn-atom'
-                            onClick={() => {
-                                nav(`/${routes[i]}`);
-                                setToggle(false);
-                            }}>
-                            {v}
-                            <div className='dot' />
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-
+            <motion.div animate={{ x: [100, 0], opacity: [0.5, 1] }}>
+                <nav className='navbar-desk'>
+                    <ul>
+                        {buttons.map((v, i) => (
+                            <li
+                                key={`nav-${i}`}
+                                className='nav-btn btn-atom'
+                                onClick={() => {
+                                    nav(`/${routes[i]}`);
+                                    setToggle(false);
+                                }}>
+                                {v}
+                                <div className='dot' />
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </motion.div>
             <nav className='navbar-menu'>
                 <HiMenuAlt4 onClick={() => setToggle(true)} />
 
