@@ -16,6 +16,12 @@ body {
     width: vmax;
 }
 
+.App {
+    @media screen and (min-width: 1600px) {
+        width: 60vw;
+        margin: auto;
+    }
+}
 .title {
     position: relative;
     font-size: 4em;
