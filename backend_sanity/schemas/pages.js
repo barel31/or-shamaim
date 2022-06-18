@@ -1,23 +1,26 @@
 export default {
-    name: 'articles',
-    title: 'Articles',
+    name: 'pages',
+    title: 'Pages',
     type: 'document',
     fields: [
         {
             name: 'name',
             title: 'Title',
             type: 'string',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'route',
             title: 'Page route',
             type: 'string',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'body',
             title: 'Body',
             type: 'array',
             of: [{ type: 'block' }],
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'bubble',
@@ -33,5 +36,4 @@ export default {
             },
         },
     ],
-    validation: (Rule) => Rule.required(),
 };

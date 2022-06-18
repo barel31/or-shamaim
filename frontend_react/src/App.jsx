@@ -29,7 +29,7 @@ export default function App() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "articles"]';
+        const query = '*[_type == "pages"]';
 
         client.fetch(query).then((data) => {
             setArticles(data);

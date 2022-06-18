@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://barel31.github.io/or-shamaim",
   "dependencies": {
+    "@portabletext/react": "^1.0.6",
     "@sanity/client": "^3.3.2",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.4",

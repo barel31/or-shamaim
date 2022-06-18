@@ -1,26 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PortableText } from '@portabletext/react';
 
 export default function Content({ article }) {
-    const setStyle = (marks) => {
-        const style = {};
-        marks.forEach((mark) => {
-            switch (mark) {
-                case 'strong':
-                    style.fontWeight = 'bold';
-                    break;
-
-                case 'underline':
-                    style.textDecoration = mark;
-                    break;
-
-                default:
-                    break;
-            }
-        });
-        return style;
-    };
-
     return (
         <div className='content'>
             <div>
@@ -29,18 +11,8 @@ export default function Content({ article }) {
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                     dir='rtl'
                     className='content-paragraph'>
-                    {article !== undefined &&
-                        article.body.map((v) => {
-                            return v.children.map((child, i) => {
-                                // child.text.replace(/\n/g, '<br />');
-                                return (
-                                    <div key={`div-${i}`}>
-                                        <p style={setStyle(child.marks)}>{child.text}</p>
-                                        {<br />}
-                                    </div>
-                                );
-                            });
-                        })}
+
+                    <PortableText value={article.body} />
                 </motion.div>
                 <motion.div
                     style={article.bubble ? {} : { display: 'none' }}
