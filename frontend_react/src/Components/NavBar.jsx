@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-export default function NavBar({ buttons, routes }) {
+export default function NavBar({ articles }) {
     const [toggle, setToggle] = useState(false);
 
     const nav = useNavigate();
@@ -13,15 +13,15 @@ export default function NavBar({ buttons, routes }) {
             <motion.div animate={{ x: [100, 0], opacity: [0.5, 1] }}>
                 <nav className='navbar-desk'>
                     <ul>
-                        {buttons.map((v, i) => (
+                        {articles.map((v, i) => (
                             <li
                                 key={`nav-${i}`}
                                 className='nav-btn btn-atom'
                                 onClick={() => {
-                                    nav(`/${routes[i]}`);
+                                    nav(`/${v.route}`);
                                     setToggle(false);
                                 }}>
-                                {v}
+                                {v.name}
                                 <div className='dot' />
                             </li>
                         ))}
@@ -35,14 +35,14 @@ export default function NavBar({ buttons, routes }) {
                     <motion.div whileInView={{ x: [100, 0] }} transition={{ duration: 0.85, ease: 'easeInOut' }}>
                         <HiX onClick={() => setToggle(false)} />
                         <ul>
-                            {buttons.map((v, i) => (
+                            {articles.map((v, i) => (
                                 <li
-                                    key={v}
+                                    key={i}
                                     onClick={() => {
                                         setToggle(false);
-                                        nav(`/${routes[i]}`);
+                                        nav(`/${v.route}`);
                                     }}>
-                                    {v}
+                                    {v.name}
                                 </li>
                             ))}
                         </ul>

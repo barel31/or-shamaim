@@ -53,8 +53,19 @@ body {
 
             .content-paragraph {
                 flex: 5;
+                display: block;
                 text-align: right;
                 padding: 0 1rem 0 0;
+
+                div, p {
+                    display: inline;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
             }
 
             .content-bubble {
