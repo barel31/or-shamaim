@@ -11,7 +11,7 @@ import { /*urlFor,*/ client } from './client';
 
 import Content from './Components/Content';
 import NavBar from './Components/NavBar';
-import Calculator from './Components/Calculator';
+// import Calculator from './Components/Calculator';
 import SocialMedia from './Components/SocialMedia';
 
 // const pages = [
@@ -31,10 +31,7 @@ export default function App() {
     useEffect(() => {
         const query = '*[_type == "pages"]';
 
-        client.fetch(query).then((data) => {
-            setArticles(data);
-            console.log({ articles: data });
-        });
+        client.fetch(query).then((data) => setArticles(data));
     }, []);
 
     return (
@@ -65,7 +62,7 @@ export default function App() {
                 <br />
                 all rights resereved
             </footer>
-            <Calculator />
+            {/* <Calculator /> */}
             <SocialMedia />
             <div id='background-wrap'>
                 <div className='x1'>
